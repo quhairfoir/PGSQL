@@ -20,4 +20,5 @@ knex.select().from('famous_people')
   for (let i = 0; i < rows.length; i++){
     console.log((i + 1) + ": " + rows[i].first_name + " " + rows[i].last_name + ", born '" + rows[i].birthdate.toString().slice(0, 15) + "'")
   }
+  knex.destroy();
 });
