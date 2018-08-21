@@ -18,13 +18,3 @@ knex('famous_people')
     console.log(`Success! ${process.argv[2]} ${process.argv[3]} added to database.`);
     knex.destroy();
   });
-
-// knex.select().from('famous_people')
-// .asCallback(function(err, rows) {
-//   if (err) return console.error(err);
-//   console.log("Found " + rows.length + " people:");
-//   for (let i = 0; i < rows.length; i++){
-//     console.log((i + 1) + ": " + rows[i].first_name + " " + rows[i].last_name + ", born '" + rows[i].birthdate.toString().slice(0, 15) + "'")
-//   }
-//   knex.destroy();
-// });
