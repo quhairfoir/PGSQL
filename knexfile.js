@@ -3,9 +3,14 @@ const settings = require('./settings');
 module.exports = {
 
   development: {
-    client: 'pg',
+    client: 'postgresql',
     connection: {
-      filename: './dev.sqlite3'
+      database: settings.database,
+      user:     settings.user,
+      password: settings.password
+    },
+    migrations: {
+      tableName: 'knex_migrations'
     }
   },
 
